@@ -51,7 +51,7 @@ def post_test():
             predict_val = np.argmax(out)
             return jsonify({"prediction":predict_val})
         else:
-            return "dont' worked"
+            return "failed"
 
 HTML("<a href='https://{}.{}'>Open Web View</a>".
      format(os.environ['CDSW_ENGINE_ID'],os.environ['CDSW_DOMAIN']))
