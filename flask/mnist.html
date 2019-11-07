@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -78,13 +76,14 @@
             return false;
 
         }
-        var url = 'https://cdsw.dev.ocrc.io/api/altus-ds-1/models/call-model';
+        var url = 'https://ml-94ebb181-c15.all-se-e.ylcu-atmi.cloudera.site/api/altus-ds-1/models/call-model';
+        var api_key = "mp5ht4pdkca1gdms2h6qfkwba7n72cj6"
       
         function go_fetch() {
             d3.select("#result").text("That looks like a ...");
             var canvas = document.getElementById("defaultCanvas0");
             var post_data = {
-                accessKey:"md7c3zmwst7az20161t6zfqimfoca3of",
+                accessKey:api_key,
                 request: { image : canvas.toDataURL() }
             };
 
