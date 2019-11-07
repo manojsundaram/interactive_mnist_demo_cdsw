@@ -2,9 +2,6 @@ from PIL import Image, ImageFilter
 import numpy as np
 from io import BytesIO
 import base64
-from PIL import 
-import os
-import sys
 from pandas.io.json import dumps as jsonify
 import torch
 import torch.nn as nn
@@ -37,9 +34,9 @@ model.eval()
 
 #example
 #
-#args = {
-#  "image": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAYAAAByDd+UAAAARUlEQVRIS+3SwQkAQAwCQdN/0XclyELIa/MVEYZMkpfDGwe3tSXdFo2kkmIBnwaTtYKkTQjnkmKyVpC0CeFcUkzWCuekH906HAF1NLazAAAAAElFTkSuQmCC"
-#}
+args = {
+  "image": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAYAAAByDd+UAAAARUlEQVRIS+3SwQkAQAwCQdN/0XclyELIa/MVEYZMkpfDGwe3tSXdFo2kkmIBnwaTtYKkTQjnkmKyVpC0CeFcUkzWCuekH906HAF1NLazAAAAAElFTkSuQmCC"
+}
 
 
 def predict(args):
