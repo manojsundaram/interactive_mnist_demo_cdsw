@@ -2,7 +2,7 @@ from flask import Flask,send_from_directory,request,send_file
 import logging
 from pandas.io.json import dumps as jsonify
 from PIL import Image
-from scipy.misc import imread
+#from scipy.misc import imread
 import numpy as np
 from io import BytesIO
 import base64
@@ -57,5 +57,7 @@ HTML("<a href='https://{}.{}'>Open Web View</a>".
      format(os.environ['CDSW_ENGINE_ID'],os.environ['CDSW_DOMAIN']))
 
 if __name__=="__main__":
-  app.run(host=os.environ['CDSW_IP_ADDRESS'], 
-          port=int(os.environ['CDSW_PUBLIC_PORT']))
+  app.run(host="127.0.0.1", 
+          port=int(os.environ['CDSW_APP_PORT']))
+#  app.run(host=os.environ['CDSW_IP_ADDRESS'], 
+#          port=int(os.environ['CDSW_PUBLIC_PORT']))  

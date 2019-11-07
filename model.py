@@ -11,6 +11,7 @@ from pandas.io.json import dumps as jsonify
 
 model = load_model('cnn_no_gpu.h5')
 
+
 def predict(args):
   im = Image.open(BytesIO(base64.b64decode(args['image'][22:])))
   im_blur = im.filter(ImageFilter.GaussianBlur(5))
